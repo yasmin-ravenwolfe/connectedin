@@ -1,5 +1,13 @@
-<h1><%=@student[:name]%></h1>
-<ul>
-	<li><%=@student[:city]%></li>
-<li><%=@student[:description]%></li>
-<img src = "<%=@student[:picture_url]%>">
+
+<%= @students %>
+ <h1> <%= @student.username %></h1>
+ 	<img src = "<%= @student.profile_pic %>">
+ 	<ul>
+ 		<li><%= @student.fullname%></li>
+		<li><%= @student.description%></li>
+		<li> Hometown: <img src = "<%= @student.city_pic %>"> </li>
+	</ul>
+ 	<a href = "<%= @student.facebook_page %>"> Facebook link</a>
+ 	<a href = "/"> Home </a>
+ 	
+
